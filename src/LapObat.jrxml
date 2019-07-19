@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="273c83db-4886-4ff5-bc83-e07ede84f706">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from tbl_obat]]>
+	</queryString>
+	<field name="kd_obat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kd_kategori" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nm_obat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga_beli" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga_jual" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stok" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="satuan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="c73372bf-6b56-406e-a5e9-676c2c981006"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="12" width="263" height="33" uuid="b45c62aa-8a4f-4b87-9f7b-3c47f8799366"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Laporan Data Obat]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="823ef46c-c942-4a4a-ab23-c987db43b436"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="79" height="15" uuid="59b6a3ca-5d70-417b-8cfe-6bfd627ab589"/>
+				<text><![CDATA[kd_obat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="79" y="19" width="79" height="15" uuid="6cb7ab23-2683-4d97-9f58-4297430dfecf"/>
+				<text><![CDATA[kd_kategori]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="158" y="19" width="79" height="15" uuid="d8ca2f52-8a49-4953-a97f-6ebeb3848388"/>
+				<text><![CDATA[nm_obat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="237" y="19" width="79" height="15" uuid="ddb2a578-645c-46de-9afd-bc566f59ca85"/>
+				<text><![CDATA[harga_beli]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="316" y="19" width="79" height="15" uuid="bf2585ca-d0f8-4d0a-8d26-907a23ba19e4"/>
+				<text><![CDATA[harga_jual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="395" y="19" width="79" height="15" uuid="fbf4170e-4933-4047-9ebb-13c84ef0ca3c"/>
+				<text><![CDATA[stok]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="19" width="79" height="15" uuid="6c5ece4c-2972-4dca-b8fe-baefe584651a"/>
+				<text><![CDATA[satuan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="a2efdffb-faf4-4fc3-8487-5959c1832789"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="79" height="15" uuid="cec8ac36-e8d6-45bd-85c6-89602e5f965d"/>
+				<textFieldExpression><![CDATA[$F{kd_obat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="79" y="0" width="79" height="15" uuid="ea82e748-9793-4cb9-8e84-d1c5c13a0364"/>
+				<textFieldExpression><![CDATA[$F{kd_kategori}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="158" y="0" width="79" height="15" uuid="e3003822-8d24-4c90-880a-e4cab760b3e2"/>
+				<textFieldExpression><![CDATA[$F{nm_obat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="237" y="0" width="79" height="15" uuid="bf4e90a3-ba69-41b2-adfc-325cfbe1a16d"/>
+				<textFieldExpression><![CDATA[$F{harga_beli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="316" y="0" width="79" height="15" uuid="caa28d84-d17c-4206-85ff-9bdd3325ca23"/>
+				<textFieldExpression><![CDATA[$F{harga_jual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="395" y="0" width="79" height="15" uuid="ba61cba1-6985-4e4a-a27d-7db94e601ea6"/>
+				<textFieldExpression><![CDATA[$F{stok}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="474" y="0" width="79" height="15" uuid="96f33b79-602a-4444-8d58-33a953191c65"/>
+				<textFieldExpression><![CDATA[$F{satuan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="80d071f0-5360-4374-9440-db4d43d19c77"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="c000ccb3-1424-4d22-9bc8-101b95b10336"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="8b2460fa-ff64-4617-953d-6592da3bc475"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="959c5177-8ebc-48d1-b02f-2df9101ea704"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
